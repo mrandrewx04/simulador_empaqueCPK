@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "App interactiva (Streamlit)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "args": ["run", "app.py"],
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Comparar escenarios (3 operarios, sólidos)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/comparar_escenarios.py",
+      "args": ["--familia", "solidos", "--operarios", "3", "--meta", "3600"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Comparar todas las familias (3 y 4 operarios)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/comparar_escenarios.py",
+      "args": ["--todo", "--reps", "3"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Evaluar productos del archivo de estándares",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/evaluar_productos.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Animación de la línea (ventana)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "simulador.animacion",
+      "args": ["--familia", "solidos", "--layout", "C", "--operarios", "4"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}
